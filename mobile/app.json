@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "retrace",
+    "name": "Retrace",
     "slug": "retrace",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -11,6 +11,7 @@
       "icon": "./assets/expo.icon"
     },
     "android": {
+      "package": "com.stefan.retrace",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -31,6 +32,15 @@
           "backgroundColor": "#208AEF",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true,
+          "locationAlwaysAndWhenInUsePermission": "Retrace uses your location to record your route, including in the background during a trip.",
+          "locationWhenInUsePermission": "Retrace uses your location to show you and your group on the map."
         }
       ],
       "@maplibre/maplibre-react-native"
