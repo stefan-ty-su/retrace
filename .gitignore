@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+
+# Secrets and env (keep the example file)
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+*.p8
+*.p12
+*.key
+*.jks
+*.keystore
+*.mobileprovision
+service-account*.json
+
+# Expo / React Native
+.expo/
+.expo-shared/
+expo-env.d.ts
+dist/
+web-build/
+.metro-health-check*
+*.tsbuildinfo
+
+# Generated native projects (rebuilt by `npx expo run:android` / prebuild)
+mobile/android/
+mobile/ios/
+
+# Android build output
+*.apk
+*.aab
+.gradle/
+.cxx/
+local.properties
+*.hprof
+
+# iOS / Xcode
+Pods/
+xcuserdata/
+DerivedData/
+
+# Supabase local dev
+supabase/.temp/
+supabase/.branches/
+
+# Cloudflare
+.wrangler/
+
+# Tests and coverage
+coverage/
+
+# Logs
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
