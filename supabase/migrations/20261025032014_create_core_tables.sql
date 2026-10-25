@@ -7,7 +7,7 @@ create table public.profiles (
     avatar_url      text
 );
 
-create table public.group (
+create table public.groups (
     group_id        uuid primary key default get_random_uuid(),
     created_by      uuid not null references public.profiles(user_id),
     created_at      timestamptz not null default now(),
@@ -33,6 +33,7 @@ create table public.trips (
     start_date      date,
     end_date        date
 );
+create index on public.trips (group_id);
 
 create table public.invites (
     invite_id       uuid primary key default get_random_uuid(),
@@ -40,6 +41,7 @@ create table public.invites (
     code            text not null unique,
     expires_at      timestamptz not null
 );
+create index on public.invites (group_id);
 
 alter table public.profiles         enable row level security;
 alter table public.groups           enable row level security;
