@@ -9,7 +9,7 @@ create table public.profiles (
 
 create table public.groups (
     group_id        uuid primary key default get_random_uuid(),
-    created_by      uuid not null references public.profiles(user_id),
+    created_by      uuid not null references public.profiles(user_id) on delete set null,
     created_at      timestamptz not null default now(),
     group_name      text not null,
     group_img_url   text
